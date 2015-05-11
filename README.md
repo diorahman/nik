@@ -1,5 +1,7 @@
 ## NIK Checker
 
+[![Build Status](https://travis-ci.org/diorahman/nik.svg?branch=master)](https://travis-ci.org/diorahman/nik)
+
 Indonesian NIK checker. It currently uses the service hosted on https://data.kpu.go.id/ss8.php
 
 ```js
