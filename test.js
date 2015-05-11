@@ -17,7 +17,7 @@ describe('NIK', function(){
   it('should be valid but not equal', function(done) {
     var falseName = 'Hihi haha';
     nik({
-      nik: config.test.truthy.nik,
+      nik: config.test.truthy.nik || process.env.NAME.toLowerCase(),
       name: falseName,
     }, function(err, obj, distance) {
       if (err)
