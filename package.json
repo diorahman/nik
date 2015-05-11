@@ -1,5 +1,5 @@
 {
-  "name": "nik",
+  "name": "nik-check",
   "version": "1.0.0",
   "description": "Indonesian NIK checker",
   "main": "index.js",
