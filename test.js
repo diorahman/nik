@@ -9,8 +9,6 @@ describe('NIK', function(){
     }, function(err, obj, distance) {
       if (err)
         done(err);
-      console.log(process.env.NAME);
-      console.log(distance);
       obj.Nama.toLowerCase().should.equal(process.env.NAME.toLowerCase());
       done();
     });
