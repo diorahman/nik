@@ -9,7 +9,9 @@ describe('NIK', function(){
     }, function(err, obj, distance) {
       if (err)
         done(err);
-      obj.Nama.toLowerCase().should.equal(config.test.truthy.name.toLowerCase() || process.env.NAME.toLowerCase());
+      console.log(process.env.NAME);
+      console.log(distance);
+      obj.Nama.toLowerCase().should.equal(process.env.NAME.toLowerCase());
       done();
     });
   });
@@ -17,7 +19,7 @@ describe('NIK', function(){
   it('should be valid but not equal', function(done) {
     var falseName = 'Hihi haha';
     nik({
-      nik: config.test.truthy.nik || process.env.NAME.toLowerCase(),
+      nik: config.test.truthy.nik || process.env.NIK,
       name: falseName,
     }, function(err, obj, distance) {
       if (err)
