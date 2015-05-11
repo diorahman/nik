@@ -4,12 +4,12 @@ var config = require('./config');
 describe('NIK', function(){
   it('should be valid', function(done) {
     nik({
-      nik: config.test.truthy.nik,
-      name: config.test.truthy.name
+      nik: config.test.truthy.nik || process.env.NIK,
+      name: config.test.truthy.name || process.env.NAME
     }, function(err, obj, distance) {
       if (err)
         done(err);
-      obj.Nama.toLowerCase().should.equal(config.test.truthy.name.toLowerCase());
+      obj.Nama.toLowerCase().should.equal(config.test.truthy.name.toLowerCase() || process.env.NAME.toLowerCase());
       done();
     });
   });
